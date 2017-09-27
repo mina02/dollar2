@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+  <title>환율 계산기 실습</title>
+  <style>
+    input{font-size: 2em;}
+    button{font-size: 1em;} }
+    body{font-size: 2em;}   
+  </style>
+</head>
+
+<body>
+  <h1 id="display">달러 환율 계산기</h1><br>
+  <input type="text" id="usa" placeholder="현재의 달러 환율">
+  <br><br><input type="text" id="dollar" placeholder="환산하고 싶은 금액($)">달러(USD)
+  <br><br><button id="action">를 원화(KRW)로 계산하기</button>
+  
+
+  <script>
+    //변수와 함수
+    // variable and function
+    action.onclick = function(){
+      console.log("OK");
+      var todayExchange = usa.value
+      var myDollar = dollar.value
+      myWon(todayExchange, myDollar);
+    }
+
+  function myWon(usa, dollar){
+    var myWon = Math.round(usa * dollar);
+
+    var Text =   "현재 환율로 " + dollar + " 달러(USD)는 " + myWon + "원(KRW) 입니다";
+    display.innerHTML = Text;
+
+  }
+
+  </script>
+
+</body>
